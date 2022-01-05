@@ -1,5 +1,4 @@
 
-conda-package-handling==1.6.0
 conda-verify==3.4.2
 alabaster==0.7.12
 appdirs==1.4.4
