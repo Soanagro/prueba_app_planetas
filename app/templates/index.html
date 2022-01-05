@@ -27,11 +27,13 @@
       {{ form.csrf_token }}
 
       <!-- START ROW -->
-      <div class="row mt4">
-        <!-- Planet data -->
+
+
+        <!-- Star data and submit button -->
         <div class="col s12 m4 mv2">
           <div class="br3 box bg-white pa3">
-            <h4 class="dim">Planet</h4>
+            <h4 class="dim">Star</h4>
+
             <div class="slidecontainer">
               <!-- Planet radius -->
               <p>
@@ -51,7 +53,7 @@
                           oninput="outputUpdate(p_mass.value, p_mass.name)") }}</span>
                 <span id="val_p_mass" class="fr">{{ "%.2f"|format(form.p_mass.data)}}</span>
               </p>
-      
+
               <!-- Planet distance-->
               <p>
                 <span class="f5">Effective thermal distance from the star</span>
@@ -68,62 +70,15 @@
         </div>
 
 
-        <!-- Star data and submit button -->
-        <div class="col s12 m4 mv2">
-          <div class="br3 box bg-white pa3">
-            <h4 class="dim">Star</h4>
-
-            <div class="slidecontainer">
-              <!-- Star radius -->
-              <p>
-                <span class="f5">Star radius</span>
-                <span class="f6 i mid-gray fr"><a href="https://en.wikipedia.org/wiki/Solar_mass">(solar units)</a></span>
-              </p>
-              <p>
-                <span class="slider">{{ form.s_radius(min=0.1, max=5,
-                          oninput="outputUpdate(s_radius.value,s_radius.name)") }}</span>
-                <span id="val_s_radius" class="fr">{{ "%.2f"|format(form.s_radius.data)}}</span>
-              </p>
-              <!-- Star magnitude -->
-
-              <p>
-                <span class="f5">Magnitude</span>
-                <span class="f6 i mid-gray fr"><a href="https://en.wikipedia.org/wiki/Magnitude_(astronomy)">(mag)</a></span>
-              </p>
-              <p>
-                <span class="slider">{{ form.s_mag(min=1, max=20,
-                        oninput="outputUpdate(s_mag.value,s_mag.name)") }}</span>
-                <span id="val_s_mag" class="fr">{{ "%.2f"|format(form.s_mag.data)}}</span>
-              </p>
-            </div>
-          </div>
-          <div class="br3 box bg-white pa3 mt2 center-align">
-            {{ form.submit(class_="btn") }}</div>
-        </div>
-
-
         <!-- Model result -->
-        <div class="col s12 m4 mv2">
-          <div class="br3 box bg-white pa3">
-            <h4 class="dim ">Habitability score</h4>
-            <p class="ph2 tc">
-              The habitability score for this planet is:</p>
-            <h3 class="teal-text text-lighten-2">{{hab_score}}</h3>
-            <p class="center-align">with a probability of
-              {{"%.1f"|format(prob)}}%
-            </p>
 
-          </div>
-    </form>
-  </div>
 
   </div>
   <!-- END ROW -->
   </div>
   <!-- Footer -->
   <footer>
-    <span class="f6 f-text">Carolina Camassa - 2020 -
-      <a class="i" href="https://carolinacamassa.tech">carolinacamassa.tech</a></span>
+    <span class="f6 f-text">Fondecyt 1201440 - 2022</span>
   </footer>
 
 

@@ -63,3 +63,6 @@ def index():
         probability = np.max(probs)*100
         print(probs, file = sys.stderr)
     return render_template('index.html', form=form, prob = probability ,hab_score = score[0])
+
+if __name__ == '__main__':
+    app.run()
